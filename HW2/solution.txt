@@ -1,0 +1,8 @@
+Project URL: https://github.coecis.cornell.edu/kw582/ORIE5270/tree/master/HW2
+Files Description:
+1) p2.py: Python Solution to Problem 2
+2) p3.py: Python SOlution to Problem 3
+3) p3_2.png: Plot of problem 3-(2)
+4) p3_3.png: Plot of problem 3-(3)
+5) p3_4.png: Plot of problem 3-(4)
+6) histogram.pdf: Histogram of problem 2-(4)
