@@ -1,8 +1,68 @@
-Project URL: https://github.coecis.cornell.edu/kw582/ORIE5270/tree/master/HW2
-Files Description:
+### Project URL: https://github.coecis.cornell.edu/kw582/ORIE5270/tree/master/HW2
+
+### Files Description:
 1) p2.py: Python Solution to Problem 2
 2) p3.py: Python SOlution to Problem 3
 3) p3_2.png: Plot of problem 3-(2)
 4) p3_3.png: Plot of problem 3-(3)
 5) p3_4.png: Plot of problem 3-(4)
 6) histogram.pdf: Histogram of problem 2-(4)
+
+### Package to Install:
+requests, re, pandas, tensorflow, keras, matplotlib, random
+
+### Q2 Instruction
+Run “python p2.py”
+
+### Answer to Problem 2-(2):
+SARKOZY, ANDRAS has collaborate with Erdos most Often and his frequency is 62.
+
+### Answer to Problem 2-(3):
+LUCA, FLORIAN is the one who last collaborate with Erdos and his year is 2007.
+
+### Answer to Problem 2-(4):
+Look at “histogram.pdf” file for histogram
+
+### Bonus:
+According to https://www.csauthors.net/distance/lijun-ding/paul-erdos, the Erdos number of Benjamin Grimmer is 3, Lijun Ding is 5.
+
+### Q3 Instruction
+Run “python p3.py”
+
+### Answer to Problem 3-(1): Print Summary
+
+Using TensorFlow backend.
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 28, 28, 32)        2432      
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 14, 14, 32)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 10, 10, 64)        51264     
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 6400)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 1000)              6401000   
+_________________________________________________________________
+dense_2 (Dense)              (None, 10)                10010     
+=================================================================
+Total params: 6,464,706
+Trainable params: 6,464,706
+Non-trainable params: 0
+_________________________________________________________________
+None
+
+### Answer to Problem 3-(2)~(4)
+For (b), see plots in file p3_2.png
+For (c), see plots in file p3_3.png
+For (d), see plots in file p3_4.png
+
+### Comment on (c):
+Comparing plot c with plot b reveals that adding a batch normalization layer reduces the model error quite significantly.
+
+### Comment on (d):
+Comparing plot c with plot b reveals that adding a dropout layer does not really improve the model.
+
+### Additional Observations:
+From the plots, adding additional layers does not necessarily improve the model. In addition, the value of each parameter has an important role in model effectiveness.
