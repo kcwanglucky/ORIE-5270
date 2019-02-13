@@ -3,7 +3,7 @@
 # https://machinelearningmastery.com/display-deep-learning-model-training-history-in-keras/
 #import tensorflow as tf
 import keras
-import numpy as np
+#import numpy as np
 import random
 from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D, BatchNormalization, Dropout
