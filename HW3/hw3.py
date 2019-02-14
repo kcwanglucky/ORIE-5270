@@ -18,6 +18,9 @@ class NameHeap:
 	Just return the first entry of the array, O(1)
 	'''
 	def smallestName(self):
+		if self.num_name == 0:
+			print("Empty heap, no name currently")
+			return
 		return self.data[0]
 
 	'''
@@ -26,6 +29,9 @@ class NameHeap:
 	(root node). Because bubbleDown() takes O(log(n)) time, this function also takes O(log(n)) time
 	'''
 	def deleteSmallestName(self):
+		if self.num_name == 0:
+			print("Empty heap, no name currently")
+			return
 		toReturn = self.data[0]
 		self.data[0] = self.data[self.num_name - 1]
 		self.num_name = self.num_name - 1
@@ -33,7 +39,7 @@ class NameHeap:
 		return toReturn
 
 	'''
-	Return the size of all the name in the heap
+	Returns the size of all the name in the heap
 	Directly return the class feature num_name, O(1)
 	'''
 	def size(self):
@@ -52,7 +58,7 @@ class NameHeap:
 		return doesContain
 
 	''' 
-	return 1 if a should occur before b, otherwise -1
+	Returns 1 if a should occur before b, otherwise -1
 	a and b should be "name" instead of index
 	'''
 	def compare(self, a, b):
@@ -102,7 +108,7 @@ class NameHeap:
 				break
 
 	'''
-	Return the index of the child that should be considered moving up one level
+	Returns the index of the child that should be considered moving up one level
 	Takes O(1) time
 	'''
 	def largerChild(self, index):
@@ -149,8 +155,15 @@ class CallCenter:
 	Other operations are O(1). Hence this method is O(log(n))
 	'''
 	def dequeueCustomer(self):
-		if self.waitlist[self.oldest_hour].size() == 0:
+		if self.total_waiting == 0:
+			print("No customer currently waiting")
+			return
+
+		while self.waitlist[self.oldest_hour].size() == 0:
 			self.oldest_hour = self.oldest_hour + 1
+			if self.oldest_hour > self.hour:
+				print("No customer currently waiting")
+				return
 		
 		customer_to_return = self.waitlist[self.oldest_hour].deleteSmallestName()
 		self.total_waiting = self.total_waiting - 1
