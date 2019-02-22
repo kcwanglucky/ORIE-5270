@@ -1,0 +1,4 @@
+Problem 1)
+
+To run the file NameHeapTests.py, run the following command in the HW4 directory:
+	python3 -m unittest NameHeapTests.py 
