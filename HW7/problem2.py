@@ -4,7 +4,7 @@ conn = sqlite3.connect('problem2.db')
 
 c = conn.cursor()
 
-# Create table
+# Create table; Drop it if already exist
 c.execute("DROP TABLE IF EXISTS Customers")
 c.execute('''CREATE TABLE Customers
              (CustomerId real, Name text)''')
@@ -33,6 +33,8 @@ print("Answer to Question 2:")
 c.execute('''SELECT Name, Day FROM Customers AS C 
 	JOIN Reservations AS R ON C.CustomerId = R.CustomerId''')
 rt1 = c.fetchall()
+
+# Use a for loop to print the output elegantly
 for rt in rt1:
 	print(rt)
 print("")
