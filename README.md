@@ -1,3 +1,3 @@
-ORIE 5270 Homework Submission<br>
+ORIE 5270 Materials<br>
 Name: Ko-Cheng Wang<br>
 NetID: kw582
